@@ -33,7 +33,7 @@ export async function getPrettierInstance(document: vscode.TextDocument): Promis
         } catch (pnpError) {
             // If Yarn PnP is not enabled, try to resolve Prettier using require.resolve
             try {
-                prettierPath = require.resolve('prettier', { paths: [workspacePath] });
+                prettierPath = require.resolve('prettier', {paths: [workspacePath]});
             } catch (resolveError) {
                 // Log an error message if Prettier cannot be resolved
                 outputChannel.appendLine('Error resolving Prettier path: ' + resolveError);

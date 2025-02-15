@@ -83,7 +83,8 @@
     "vscode:prepublish": "npm run compile",
     "compile": "node esbuild.config.js",
     "t": "node t.js",
-    "watch": "esbuild --watch"
+    "watch": "esbuild --watch",
+    "format": "prettier --write src esbuild.config.js publish.js"
   },
   "dependencies": {
     "@types/resolve": "^1.20.6",

@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import { getPrettierInstance } from './prettierResolver';
-import { outputChannel } from './outputChannel';
+import {getPrettierInstance} from './prettierResolver';
+import {outputChannel} from './outputChannel';
 
 let disposables: vscode.Disposable[] = [];
 
@@ -29,7 +29,7 @@ async function formatDocument(document: vscode.TextDocument) {
         outputChannel.appendLine(`Resolved Prettier config file path: ${configFilePath}`);
 
         // Format the document text using Prettier
-        const formatted = await prettier.format(text, { ...options, filepath: fileName });
+        const formatted = await prettier.format(text, {...options, filepath: fileName});
         const edit = new vscode.WorkspaceEdit();
         const fullRange = new vscode.Range(document.positionAt(0), document.positionAt(text.length));
         edit.replace(document.uri, fullRange, formatted);
@@ -89,12 +89,12 @@ export const activate = async (context: vscode.ExtensionContext) => {
         const prettierSupportInfo = await prettier.getSupportInfo();
         const vscodeLanguages = [];
         for (const language of prettierSupportInfo.languages) {
-            vscodeLanguages.push(...language.vscodeLanguageIds || []);
+            vscodeLanguages.push(...(language.vscodeLanguageIds || []));
         }
 
         vscodeLanguages.forEach(language => {
             const provider = vscode.languages.registerDocumentFormattingEditProvider(
-                { scheme: 'file', language },
+                {scheme: 'file', language},
                 {
                     async provideDocumentFormattingEdits(document: vscode.TextDocument): Promise<vscode.TextEdit[]> {
                         outputChannel.appendLine('Formatting document with Prettier...');
