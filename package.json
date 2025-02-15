@@ -8,6 +8,7 @@
   "repository": {
     "url": "https://github.com/Jme797/VSCode-Plugin-Prettier"
   },
+  "homepage": "https://github.com/Jme797/VSCode-Plugin-Prettier/blob/master/Readme.md",
   "engines": {
     "vscode": "^1.75.0"
   },
