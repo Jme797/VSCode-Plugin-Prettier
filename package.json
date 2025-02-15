@@ -3,7 +3,7 @@
   "license": "MIT",
   "displayName": "Prettier Formatter",
   "description": "A VS Code extension to format code using Prettier",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "Jme797",
   "repository": {
     "url": "https://github.com/Jme797/VSCode-Plugin-Prettier"
