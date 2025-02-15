@@ -67,8 +67,6 @@ export const activate = async (context: vscode.ExtensionContext) => {
         return;
     }
 
-    outputChannel.show(true);
-
     try {
         // Register the command to format the document with Prettier
         let disposable = vscode.commands.registerCommand('extension.formatWithPrettier', async () => {
