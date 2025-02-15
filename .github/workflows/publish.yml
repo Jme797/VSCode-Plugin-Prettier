@@ -33,15 +33,13 @@ jobs:
     #   run: vsce publish
 
     - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.5.3
+      uses: shimataro/ssh-key-action@v2
       with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      id: ssh
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        known_hosts: github.com
 
     - name: Test SSH connection
       run: ssh -T git@github.com
-      env:
-        SSH_AUTH_SOCK: ${{ steps.ssh.outputs.ssh-auth-sock }}
 
     - name: Commit and push version bump
       run: |
@@ -50,5 +48,3 @@ jobs:
         git add package.json
         git commit -m 'Bump patch version'
         git push git@github.com:Jme797/VSCode-Plugin-Prettier.git HEAD:master
-      env:
-        SSH_AUTH_SOCK: ${{ steps.ssh.outputs.ssh-auth-sock }}
