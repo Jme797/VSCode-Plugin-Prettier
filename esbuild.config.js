@@ -6,7 +6,7 @@ esbuild.build({
     platform: 'node',
     target: 'node14',
     outfile: 'out/extension.js',
-    external: ['vscode'],
+    external: ['vscode', 'prettier'],
     sourcemap: true,
     tsconfig: './tsconfig.json',
 }).catch(() => process.exit(1));
