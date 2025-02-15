@@ -1,5 +1,6 @@
 {
   "name": "prettier-vscode-extension",
+  "license": "MIT",
   "displayName": "Prettier Formatter",
   "description": "A VS Code extension to format code using Prettier",
   "version": "0.5.47",
