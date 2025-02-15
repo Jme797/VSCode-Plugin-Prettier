@@ -8,3 +8,9 @@ This repository contains a Visual Studio Code extension that formats code using 
 - Supports JavaScript, TypeScript, and other languages supported by Prettier
 - Customizable Prettier configuration
 - Integration with Yarn Plug'n'Play (PnP) environments
+
+## Yarn SDKs
+
+This plugin requires the generation of the Editor SDKs for use with Yarn PnP.
+
+For more information, refer to the [Yarn SDKs documentation](https://yarnpkg.com/getting-started/editor-sdks).
