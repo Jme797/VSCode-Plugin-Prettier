@@ -20,6 +20,14 @@
     "onLanguage:typescript",
     "onLanguage:typescriptreact"
   ],
+  "keywords": [
+    "prettier",
+    "plugin",
+    "sort",
+    "import",
+    "typescript",
+    "javascript"
+  ],
   "contributes": {
     "commands": [
       {
