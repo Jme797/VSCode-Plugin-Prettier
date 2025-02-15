@@ -7,6 +7,7 @@ on:
 
 jobs:
   publish:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"  # Skip if commit message contains [skip ci]
     runs-on: ubuntu-latest
 
     steps:
@@ -38,10 +39,10 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         known_hosts: github.com
 
-    # - name: Commit and push version bump
-    #   run: |
-    #     git config --global user.name 'github-actions[bot]'
-    #     git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-    #     git add package.json
-    #     git commit -m 'Bump patch version'
-    #     git push git@github.com:Jme797/VSCode-Plugin-Prettier.git HEAD:master
+    - name: Commit and push version bump
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add package.json
+        git commit -m 'Bump patch version [skip ci]'
+        git push git@github.com:Jme797/VSCode-Plugin-Prettier.git HEAD:master
