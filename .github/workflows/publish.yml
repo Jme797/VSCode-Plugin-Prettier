@@ -38,9 +38,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         known_hosts: github.com
 
-    - name: Test SSH connection
-      run: ssh -T git@github.com
-
     - name: Commit and push version bump
       run: |
         git config --global user.name 'github-actions[bot]'
