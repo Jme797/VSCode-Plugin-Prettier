@@ -1,0 +1,54 @@
+{
+  "name": "prettier-vscode-extension",
+  "displayName": "Jordan's Prettier Formatter",
+  "description": "A VS Code extension to format code using Prettier",
+  "version": "0.5.10",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.formatWithPrettier",
+        "title": "Format with Prettier"
+      }
+    ],
+    "configurationDefaults": {
+      "[javascript]": {
+        "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension"
+      },
+      "[typescript]": {
+        "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension"
+      },
+      "[typescriptreact]": {
+        "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension"
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "node esbuild.config.js",
+    "watch": "esbuild --watch",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "prettier": "^3.5.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.0.0",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.2.2"
+  }
+}
