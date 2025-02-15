@@ -17,9 +17,29 @@
   "main": "./out/extension.js",
   "activationEvents": [
     "onCommand:extension.formatWithPrettier",
+    "onLanguage:css",
+    "onLanguage:postcss",
+    "onLanguage:less",
+    "onLanguage:scss",
+    "onLanguage:graphql",
+    "onLanguage:handlebars",
+    "onLanguage:html",
+    "onLanguage:vue",
     "onLanguage:javascript",
+    "onLanguage:mongo",
+    "onLanguage:javascriptreact",
     "onLanguage:typescript",
-    "onLanguage:typescriptreact"
+    "onLanguage:typescriptreact",
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "onLanguage:json5",
+    "onLanguage:markdown",
+    "onLanguage:mdx",
+    "onLanguage:yaml",
+    "onLanguage:ansible",
+    "onLanguage:dockercompose",
+    "onLanguage:github-actions-workflow",
+    "onLanguage:home-assistant"
   ],
   "keywords": [
     "prettier",
@@ -38,33 +58,111 @@
     ],
     "languages": [
       {
-        "id": "javascript",
+        "id": "css",
         "extensions": [
-          ".js",
-          ".jsx",
-          ".mjs",
-          ".cjs"
+          ".css"
         ],
         "aliases": [
-          "JavaScript",
-          "javascript",
-          "js",
-          "JSX",
-          "jsx"
+          "CSS"
+        ]
+      },
+      {
+        "id": "postcss",
+        "extensions": [
+          ".postcss"
+        ],
+        "aliases": [
+          "PostCSS"
+        ]
+      },
+      {
+        "id": "less",
+        "extensions": [
+          ".less"
+        ],
+        "aliases": [
+          "Less"
+        ]
+      },
+      {
+        "id": "scss",
+        "extensions": [
+          ".scss"
+        ],
+        "aliases": [
+          "SCSS"
+        ]
+      },
+      {
+        "id": "graphql",
+        "extensions": [
+          ".graphql"
+        ],
+        "aliases": [
+          "GraphQL"
+        ]
+      },
+      {
+        "id": "handlebars",
+        "extensions": [
+          ".hbs"
+        ],
+        "aliases": [
+          "Handlebars"
+        ]
+      },
+      {
+        "id": "html",
+        "extensions": [
+          ".html"
+        ],
+        "aliases": [
+          "HTML"
+        ]
+      },
+      {
+        "id": "vue",
+        "extensions": [
+          ".vue"
+        ],
+        "aliases": [
+          "Vue"
+        ]
+      },
+      {
+        "id": "javascript",
+        "extensions": [
+          ".js"
+        ],
+        "aliases": [
+          "JavaScript"
+        ]
+      },
+      {
+        "id": "mongo",
+        "extensions": [
+          ".mongo"
+        ],
+        "aliases": [
+          "Mongo"
+        ]
+      },
+      {
+        "id": "javascriptreact",
+        "extensions": [
+          ".jsx"
+        ],
+        "aliases": [
+          "JavaScript React"
         ]
       },
       {
         "id": "typescript",
         "extensions": [
-          ".ts",
-          ".tsx"
+          ".ts"
         ],
         "aliases": [
-          "TypeScript",
-          "typescript",
-          "ts",
-          "TSX",
-          "tsx"
+          "TypeScript"
         ]
       },
       {
@@ -73,20 +171,168 @@
           ".tsx"
         ],
         "aliases": [
-          "TypeScript React",
-          "typescriptreact",
-          "tsx"
+          "TypeScript React"
+        ]
+      },
+      {
+        "id": "json",
+        "extensions": [
+          ".json"
+        ],
+        "aliases": [
+          "JSON"
+        ]
+      },
+      {
+        "id": "jsonc",
+        "extensions": [
+          ".jsonc"
+        ],
+        "aliases": [
+          "JSONC"
+        ]
+      },
+      {
+        "id": "json5",
+        "extensions": [
+          ".json5"
+        ],
+        "aliases": [
+          "JSON5"
+        ]
+      },
+      {
+        "id": "markdown",
+        "extensions": [
+          ".md"
+        ],
+        "aliases": [
+          "Markdown"
+        ]
+      },
+      {
+        "id": "mdx",
+        "extensions": [
+          ".mdx"
+        ],
+        "aliases": [
+          "MDX"
+        ]
+      },
+      {
+        "id": "yaml",
+        "extensions": [
+          ".yaml"
+        ],
+        "aliases": [
+          "YAML"
+        ]
+      },
+      {
+        "id": "ansible",
+        "extensions": [
+          ".ansible"
+        ],
+        "aliases": [
+          "Ansible"
+        ]
+      },
+      {
+        "id": "dockercompose",
+        "extensions": [
+          ".dockercompose"
+        ],
+        "aliases": [
+          "Docker Compose"
+        ]
+      },
+      {
+        "id": "github-actions-workflow",
+        "extensions": [
+          ".github-actions"
+        ],
+        "aliases": [
+          "GitHub Actions Workflow"
+        ]
+      },
+      {
+        "id": "home-assistant",
+        "extensions": [
+          ".home-assistant"
+        ],
+        "aliases": [
+          "Home Assistant"
         ]
       }
     ],
     "configurationDefaults": {
+      "[css]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[postcss]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[less]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[scss]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[graphql]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[handlebars]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[html]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[vue]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
       "[javascript]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[mongo]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[javascriptreact]": {
         "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
       },
       "[typescript]": {
         "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
       },
       "[typescriptreact]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[json]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[jsonc]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[json5]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[markdown]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[mdx]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[yaml]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[ansible]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[dockercompose]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[github-actions-workflow]": {
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
+      },
+      "[home-assistant]": {
         "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
       }
     }
@@ -102,20 +348,6 @@
   "dependencies": {
     "@types/resolve": "^1.20.6",
     "pnpapi": "^0.0.0",
-    "prettier": "^3.5.0",
-    "resolve": "^1.22.10",
     "resolve-package-path": "^4.0.3"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.75.0",
-    "esbuild": "^0.25.0",
-    "ts-loader": "^9.5.2",
-    "typescript": "^5.0.0",
-    "vscode-test": "^1.6.0"
-  },
-  "icon": "images/icon.png",
-  "galleryBanner": {
-    "color": "#1E90FF",
-    "theme": "dark"
   }
 }
