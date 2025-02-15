@@ -6,7 +6,7 @@
     }
   ],
   "prettier.configPath": "./frontend/prettier.config.mjs",
-  "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension",
+  "editor.defaultFormatter": "Jme797.prettier-vscode-extension",
   "eslint.validate": [
     "javascript",
     "javascriptreact",

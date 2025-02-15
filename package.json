@@ -1,9 +1,12 @@
 {
   "name": "prettier-vscode-extension",
-  "displayName": "Jordan's Prettier Formatter",
+  "displayName": "Prettier Formatter",
   "description": "A VS Code extension to format code using Prettier",
   "version": "0.5.45",
-  "publisher": "your-publisher-name",
+  "publisher": "Jme797",
+  "repository": {
+    "url": "https://github.com/Jme797/VSCode-Plugin-Prettier-"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -69,13 +72,13 @@
     ],
     "configurationDefaults": {
       "[javascript]": {
-        "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension"
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
       },
       "[typescript]": {
-        "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension"
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
       },
       "[typescriptreact]": {
-        "editor.defaultFormatter": "your-publisher-name.prettier-vscode-extension"
+        "editor.defaultFormatter": "Jme797.prettier-vscode-extension"
       }
     }
   },
