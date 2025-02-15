@@ -38,6 +38,11 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       id: ssh
 
+    - name: Test SSH connection
+      run: ssh -T git@github.com
+      env:
+        SSH_AUTH_SOCK: ${{ steps.ssh.outputs.ssh-auth-sock }}
+
     - name: Commit and push version bump
       run: |
         git config --global user.name 'github-actions[bot]'
