@@ -32,7 +32,7 @@ export async function getPrettierInstance(document: vscode.TextDocument): Promis
             }
         } else {
             try {
-                prettierPath = require.resolve('prettier', { paths: [workspacePath] });
+                prettierPath = require.resolve('prettier', {paths: [workspacePath]});
             } catch (resolveError) {
                 outputChannel.appendLine('Error resolving Prettier path: ' + resolveError);
                 return prettier;
